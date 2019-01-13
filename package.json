@@ -5,7 +5,7 @@
     "main": "lib/public_api.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "build": "tsc"
+        "build": "rm -rf lib && ngc && mv aot/src lib && rm -rf aot"
     },
     "repository": {
         "type": "git",
@@ -22,10 +22,12 @@
         "url": "https://github.com/jymfony/angular-universal-bridge/issues"
     },
     "devDependencies": {
+        "@angular/compiler": "^7.0.0",
+        "@angular/compiler-cli": "^7.0.0",
         "typescript": "^3.2.2"
     },
     "dependencies": {
-        "@angular/core": "^7.2.0",
+        "@angular/core": "^7.0.0",
         "rxjs": "^6.3.3"
     }
 }
