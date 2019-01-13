@@ -2,8 +2,10 @@
     "name": "@jymfony/angular-universal-bridge",
     "version": "0.1.0-dev",
     "description": "Jymfony Angular Universal Bridge",
+    "main": "lib/public_api.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "tsc"
     },
     "repository": {
         "type": "git",
@@ -18,5 +20,12 @@
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/jymfony/angular-universal-bridge/issues"
+    },
+    "devDependencies": {
+        "typescript": "^3.2.2"
+    },
+    "dependencies": {
+        "@angular/core": "^7.2.0",
+        "rxjs": "^6.3.3"
     }
 }

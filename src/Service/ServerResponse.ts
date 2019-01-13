@@ -45,7 +45,7 @@ export class ServerResponse {
     /**
      * Sets the response status code and text.
      */
-    public setStatusCode(code: number, text: string = undefined): void {
+    public setStatusCode(code: number, text: string|undefined = undefined): void {
         if (! this._serverResponse) {
             return;
         }
@@ -176,7 +176,7 @@ export class ServerResponse {
      *
      * @final
      */
-    setExpires(date: number = undefined): void {
+    setExpires(date: number|undefined = undefined): void {
         if (! this._serverResponse) {
             return;
         }
@@ -428,7 +428,7 @@ export class ServerResponse {
      */
     get protocolVersion() {
         if (! this._serverResponse) {
-            return;
+            return '1.1';
         }
 
         return this._serverResponse.protocolVersion;
@@ -442,13 +442,13 @@ export class ServerResponse {
             date.setTime(date.valueOf() - 31536001000);
             str += 'deleted; expires=' + date.toUTCString() + '; Max-Age=0';
         } else {
-            str += cookie.raw ? cookie.value : encodeURIComponent(cookie.value);
+            str += cookie.raw ? cookie.value : encodeURIComponent(<string>cookie.value);
 
             if (0 !== cookie.expire) {
                 const date = new Date();
-                const maxAge = Math.max(0, cookie.expire * 1000 - date.valueOf());
+                const maxAge = Math.max(0, <number>cookie.expire * 1000 - date.valueOf());
 
-                date.setTime(cookie.expire * 1000);
+                date.setTime(<number>cookie.expire * 1000);
                 str += '; expires=' + date.toUTCString() + '; Max-Age=' + ~~(maxAge / 1000);
             }
         }
