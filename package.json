@@ -1,0 +1,22 @@
+{
+    "name": "@jymfony/angular-universal-bridge",
+    "version": "0.1.0-dev",
+    "description": "Jymfony Angular Universal Bridge",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/jymfony/angular-universal-bridge.git"
+    },
+    "keywords": [
+        "jymfony",
+        "angular",
+        "universal"
+    ],
+    "author": "Alessandro Chitolina <alekitto@gmail.com>",
+    "license": "MIT",
+    "bugs": {
+        "url": "https://github.com/jymfony/angular-universal-bridge/issues"
+    }
+}
