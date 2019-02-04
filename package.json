@@ -1,6 +1,6 @@
 {
     "name": "@jymfony/angular-universal-bridge",
-    "version": "0.1.0-dev",
+    "version": "0.0.1",
     "description": "Jymfony Angular Universal Bridge",
     "main": "lib/public_api.js",
     "scripts": {
